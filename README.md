@@ -71,3 +71,30 @@ El proceso de corrección generará para cada archivo corregido:
 ##### Extra: Configuraciones
 
 En el archivo `nlp_project/config.py` encontrarán varias flags que permiten tomar decisiones sobre distintos elementos a la hora de procesar los textos. Estas flags por defecto tienen los valores que mejor resultados obtuvieron, pero pueden ser cambiadas a gusto por los valores allí indicados.
+
+#### 6- Script para reconstruir LUISA
+Para poder ejecutar correctamente el script que reconstruye LUISA se debe tener configurado las siguientes constantes en el archivo .env.
+- PSQL_HOST = (ej. localhost)
+- PSQL_PORT = (ej. 5432)
+- PSQL_USER = (ej. postgres)
+- PSQL_PASS = (ej. postgres)
+- LOCAL_LUISA_TRADUCTIONS_PATH= (ej. /path/LOCAL_LUISA_TRADUCTIONS_PATH)
+
+El script se llama "createBlocks.py" y se encuentra en la ruta "nlp/nlp_project/scripts/".
+Se le pueden pasar distintas flags para utilizar diferentes configuraciones.
+
+Flags posibles_
+ "-t" o "--tanda"       		..Es el nombre de la base a la que se quiere conetar.
+ "-i" o "--image"       		..El nombre de una hoja a procesar(si no se pasa la flag se procesa todas las hojas de la tanda o base)
+ "-fc" o "--filterChar" 		..Caracteres filtrar en la salida para eliminar de la salida
+ "-Join_Split_Word"		      ..Unir o no las palabras dividas con '-' y salto de linea (si está la flag activa se unen)
+ "-d" o "--dbType"		      ..Valor "1" para base con formato nuevo (en nuestro caso la tanda 2 tenía distinta estructura de datos que        la tanda 0), valor "2" para base con formato anterior (sin la flag se toma valor "1" por defecto)  
+ 
+ 
+ Ejemplos de ejecucion:
+python3 createBlocks.py -Join_Split_Word -t=tanda2 
+python3 createBlocks.py -Join_Split_Word -t=tanda0 -d=1
+python3 createBlocks.py -t=tanda2 -i="r421_0028.1984"
+python3 createBlocks.py -t=tanda0 -d=2 -fc="@"
+
+- Las salidas se guardan en el path configurado para la constante "LOCAL_LUISA_TRADUCTIONS_PATH".
