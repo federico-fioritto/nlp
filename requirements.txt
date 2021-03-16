@@ -1,0 +1,10 @@
+kenlm
+python-dotenv
+pandas
+pyyaml
+plotly
+tabulate
+matplotlib
+nltk
+requests
+symspellpy

@@ -1,0 +1,9 @@
+freeling.txt: Freeling pelado
+freeling_plus_abb.txt: Freeling menos palabras que contenían "+", más abreviaciones sacadas de RLA
+vocabuary1.0: Freeling menos palabras que contenían "+", más todo RLA (incluso prefijos y sufijos generados). Se agregaron las palabras RAE y noRAE genéricas, UY y AR.
+vocabuary1.1: 1.0 a minúscula
+vocabuary1.2: únicas de 1.1 
+vocabuary1.3: 1.2 más sinónimos de RLA, más 1ro, 2do, 3ro, 4to, 5to y 6to
+vocabuary1.4: 1.3 sin palabras chilenas
+1.3-1.4.txt: Diferencia entre 1.4 y 1.3
+vocabuary1.5: 1.4 más y/o
