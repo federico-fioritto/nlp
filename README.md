@@ -101,7 +101,7 @@ Flags posibles:
  
 python3 createBlocks.py -Join_Split_Word -t=tanda2 
 
-python3 createBlocks.py -Join_Split_Word -t=tanda0 -d=1
+python3 createBlocks.py -Join_Split_Word -t=tanda0 -d=2
 
 python3 createBlocks.py -t=tanda2 -i="r421_0028.1984"
 
