@@ -88,13 +88,32 @@ Flags posibles:
 
  "-t" o "--tanda"       		..Es el nombre de la base a la que se quiere conetar.
  
- "-i" o "--image"       		..El nombre de una hoja a procesar(si no se pasa la flag se procesa todas las hojas de la tanda o base)
+ "-i" o "--image"       		..El nombre de una hoja a procesar(si no se pasa la flag se procesa todas las hojas de la tanda o base).
  
- "-fc" o "--filterChar" 		..Caracteres filtrar en la salida para eliminar de la salida
+ "-fc" o "--filterChar" 		..Caracteres filtrar en la salida para eliminar de la salida.
  
- "-Join_Split_Word"		      ..Unir o no las palabras dividas con '-' y salto de linea (si está la flag activa se unen)
+ "-Join_Split_Word"		      ..Unir o no las palabras dividas con '-' y salto de linea (si está la flag activa se unen).
  
- "-d" o "--dbType"		      ..Valor "1" para base con formato nuevo (en nuestro caso la tanda 2 tenía distinta estructura de datos que        la tanda 0), valor "2" para base con formato anterior (sin la flag se toma valor "1" por defecto)  
+ "-d" o "--dbType"		      ..Valor "1" para base con formato nuevo (en nuestro caso la tanda 2 tenía distinta estructura de datos que        la tanda 0), valor "2" para base con formato anterior (sin la flag se toma valor "1" por defecto).
+ 
+ Las tablas y columnas principales de la estructura de datos para la flag "dbType" en resumen es:
+ 
+ ## dbType=1
+ 
+ HOJA (id, rollo, filename, hash)
+ 
+ BLOQUE (i0,j0,i1,j1,hashid,apariciones,hashhoja)
+ 
+ TEXTO (id, texto, hashidbloque)
+ 
+ ## dbType=2
+ 
+ HOJA (id, rollo, filename, hash)
+ 
+ BLOQUE (id, idhoja, i0,j0,i1,j1,hash)
+ 
+ TEXTO (id, texto, idbloque)
+ 
  
  
  Ejemplos de ejecucion:
