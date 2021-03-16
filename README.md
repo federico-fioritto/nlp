@@ -100,8 +100,11 @@ Flags posibles:
  Ejemplos de ejecucion:
  
 python3 createBlocks.py -Join_Split_Word -t=tanda2 
+
 python3 createBlocks.py -Join_Split_Word -t=tanda0 -d=1
+
 python3 createBlocks.py -t=tanda2 -i="r421_0028.1984"
+
 python3 createBlocks.py -t=tanda0 -d=2 -fc="@"
 
 - Las salidas se guardan en el path configurado para la constante "LOCAL_LUISA_TRADUCTIONS_PATH".
