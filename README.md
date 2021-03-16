@@ -82,7 +82,7 @@ Para poder ejecutar correctamente el script que reconstruye LUISA se debe tener 
 - LOCAL_LUISA_TRADUCTIONS_PATH= (ej. /path/LOCAL_LUISA_TRADUCTIONS_PATH)
 
 El script se llama "createBlocks.py" y se encuentra en la ruta "nlp/nlp_project/scripts/".
-Se le pueden pasar distintas flags para utilizar diferentes configuraciones.
+Se le pueden pasar distintas flags para utilizar diferentes configuraciones. Se espera tener una base de datos con determinada estructura que en nuestro caso fué brindada por la Facultad de Ingeniería.
 
 #### Flags posibles:
 
@@ -100,19 +100,23 @@ Se le pueden pasar distintas flags para utilizar diferentes configuraciones.
  
  ##### dbType=1
  
- HOJA (id, rollo, filename, hash)
+ TABLA (columnas,,)
  
- BLOQUE (i0,j0,i1,j1,hashid,apariciones,hashhoja)
+ - HOJA (id, rollo, filename, hash)
  
- TEXTO (id, texto, hashidbloque)
+ - BLOQUE (i0,j0,i1,j1,hashid,apariciones,hashhoja)
+ 
+ - TEXTO (id, texto, hashidbloque)
  
  ##### dbType=2
  
- HOJA (id, rollo, filename, hash)
+ TABLA (columnas,,)
  
- BLOQUE (id, idhoja, i0,j0,i1,j1,hash)
+ - HOJA (id, rollo, filename, hash)
  
- TEXTO (id, texto, idbloque)
+ - BLOQUE (id, idhoja, i0,j0,i1,j1,hash)
+ 
+ - TEXTO (id, texto, idbloque)
  
  
  
