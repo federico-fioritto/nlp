@@ -96,7 +96,7 @@ Se le pueden pasar distintas flags para utilizar diferentes configuraciones.
  
  "-d" o "--dbType"		      ..Valor "1" para base con formato nuevo (en nuestro caso la tanda 2 tenía distinta estructura de datos que        la tanda 0), valor "2" para base con formato anterior (sin la flag se toma valor "1" por defecto).
  
- Las tablas y columnas principales de la estructura de datos para la flag "dbType" en resumen es:
+ #### Las tablas y columnas principales de la estructura de datos para la flag "dbType" en resumen es:
  
  ##### dbType=1
  
